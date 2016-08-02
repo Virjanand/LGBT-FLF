@@ -2,7 +2,7 @@
 
 <div class="container list-group">
     <% @cities.each do |city| %>
-      <a href=<%="https://www.booking.com/searchresults.en-gb.html?city=#{city.booking_id}"
+      <a href=<%="#{city.id}"
               %> class="city-item list-group-item">
         <%= city.name %></a>
     <% end %>
