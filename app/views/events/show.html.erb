@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>:</strong>
+  <%= @event. %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @event.description %>
+</p>
+
+<p>
+  <strong>Rails:</strong>
+  <%= @event.rails %>
+</p>
+
+<p>
+  <strong>G:</strong>
+  <%= @event.g %>
+</p>
+
+<p>
+  <strong>Scaffold:</strong>
+  <%= @event.scaffold %>
+</p>
+
+<p>
+  <strong>Location name:</strong>
+  <%= @event.location_name %>
+</p>
+
+<p>
+  <strong>Location latitude:</strong>
+  <%= @event.location_latitude %>
+</p>
+
+<p>
+  <strong>Location longitude:</strong>
+  <%= @event.location_longitude %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @event.url %>
+</p>
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>

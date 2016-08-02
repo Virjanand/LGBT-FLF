@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  : 
+  description: MyText
+  rails: MyString
+  g: MyString
+  scaffold: MyString
+  location_name: MyString
+  location_latitude: 1.5
+  location_longitude: 1.5
+  url: MyString
+
+two:
+  : 
+  description: MyText
+  rails: MyString
+  g: MyString
+  scaffold: MyString
+  location_name: MyString
+  location_latitude: 1.5
+  location_longitude: 1.5
+  url: MyString
