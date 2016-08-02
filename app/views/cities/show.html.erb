@@ -5,6 +5,7 @@
   <div id="map" style='width: 800px; height: 400px;'></div>
 </div>
 
+
 <script type="text/javascript">
  handler = Gmaps.build('Google');
 handler.buildMap({
@@ -17,20 +18,12 @@ handler.buildMap({
     }
   },
   function(){
-    markers = handler.addMarkers([
-      {
-        "lat": <%= Event.first.location_latitude %>,
-        "lng": <%= Event.first.location_longitude %>,
-        "picture": {
-          "url": "http://people.mozilla.com/~faaborg/files/shiretoko/firefoxIcon/firefox-32.png",
-          "width":  32,
-          "height": 32
-        },
-        "infowindow": "hello!"
-      }
-    ]);
+    markers = handler.addMarkers(<%=raw @hash.to_json %>);
     handler.bounds.extendWith(markers);
     handler.fitMapToBounds();
   }
 );
 </script>
+
+
+
