@@ -1,13 +1,13 @@
-<%= form_for @event, :html => { :class => "form-horizontal event" } do |f| %>
+<%= form_for @hotel, :html => { :class => "form-horizontal hotel" } do |f| %>
 
-  <% if @event.errors.any? %>
+  <% if @hotel.errors.any? %>
     <div id="error_expl" class="panel panel-danger">
       <div class="panel-heading">
-        <h3 class="panel-title"><%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved:</h3>
+        <h3 class="panel-title"><%= pluralize(@hotel.errors.count, "error") %> prohibited this hotel from being saved:</h3>
       </div>
       <div class="panel-body">
         <ul>
-        <% @event.errors.full_messages.each do |msg| %>
+        <% @hotel.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
         <% end %>
         </ul>
@@ -62,7 +62,7 @@
     <div class="col-lg-offset-2 col-lg-10">
       <%= f.submit nil, :class => 'btn btn-primary' %>
       <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-                events_path, :class => 'btn btn-default' %>
+                hotels_path, :class => 'btn btn-default' %>
     </div>
   </div>
 

@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160802151229) do
+ActiveRecord::Schema.define(version: 20160802152853) do
+
+  create_table "bars", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "location_name"
+    t.float    "location_latitude"
+    t.float    "location_longitude"
+    t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "cities", force: true do |t|
     t.string   "name"
@@ -22,6 +33,17 @@ ActiveRecord::Schema.define(version: 20160802151229) do
   end
 
   create_table "events", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "location_name"
+    t.float    "location_latitude"
+    t.float    "location_longitude"
+    t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "hotels", force: true do |t|
     t.string   "name"
     t.text     "description"
     t.string   "location_name"
