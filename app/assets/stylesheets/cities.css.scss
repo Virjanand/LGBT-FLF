@@ -1,3 +1,41 @@
 // Place all the styles related to the cities controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.container {
+  max-width: 500px;
+}
+
+.city-item {
+  text-align: center;
+
+}
+.list-group-item:nth-child(1) {
+  background-color: #f80c12;
+}
+.list-group-item:nth-child(2) {
+  background-color: #ff5802;
+}
+.list-group-item:nth-child(3) {
+  background-color: #fe9601;
+}
+.list-group-item:nth-child(4) {
+  background-color: #ffd300;
+}
+.list-group-item:nth-child(5) {
+  background-color: #fbff00;
+}
+.list-group-item:nth-child(6) {
+  background-color: #9dff50;
+}
+.list-group-item:nth-child(7) {
+  background-color: #6bd025;
+}
+.list-group-item:nth-child(8) {
+  background-color: #12bdb9;
+}
+.list-group-item:nth-child(9) {
+  background-color: #2156ff;
+}
+.list-group-item:nth-child(10) {
+  background-color: #724299;
+}
