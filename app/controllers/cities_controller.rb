@@ -17,16 +17,19 @@ class CitiesController < ApplicationController
       marker.infowindow "<b>" + event.name + "</b></br>" + event.location_name\
       + "</br>" + "<a href=http://#{event.url}>More info</a>"
       if event.event_type == 'Hotel'
-        url = "http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=H|F7E5E5|000000"
+         color = '6698ff'
+         letter = 'H'
       elsif event.event_type == 'Event'
-        url = "http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=E|98FF66|000000"
+         color = 'ff6698'
+         letter = 'E'
       elsif event.event_type == 'Bar'
-        url = "http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=B|FF0000|000000"
+          color = '98ff66'
+          letter = 'B'
       end
       marker.picture({
-        "url" => url,
-        "width" =>  '32',        
-        "height" => '32'
+        "url" => "http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=#{letter}|#{color}|000000",
+        "width" =>  32,        
+        "height" => 32
         })
       end
     end
