@@ -1,6 +1,8 @@
-<%= link_to "Hotels", city_path(params[:id], :cat => "Hotel"), class: "hotel btn btn-success" %>
+<%= link_to "Get a Room", city_path(params[:id], :cat => "Hotel"), class: "hotel btn btn-success" %>
 
+<%= link_to "Get a Ride", city_path(params[:id], :cat => "Taxi"), class: "taxi btn btn-success" %>
 
+<%= link_to "All", city_path(params[:id]), class: "everything btn btn-success" %>
 
 <div style='width: 800px;'>
   <div id="map"></div>

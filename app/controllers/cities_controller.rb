@@ -11,7 +11,7 @@ class CitiesController < ApplicationController
   # GET /cities/1.json
   def show
     if params[:cat]
-      @events = Event.where(event_type: params[:cat])
+      @events = Event.where(:event_type => ['Event', 'Bar', params[:cat]])
     else
       @events = Event.all
     end
@@ -23,11 +23,11 @@ class CitiesController < ApplicationController
       if event.event_type == 'Hotel'
         url = 'https://raw.githubusercontent.com/Virjanand/LGBT-FLF/master/lib/assets/images/hotel.ico'
       elsif event.event_type == 'Event'
-        url = 'assets/hotel.png'
+        url = 'https://raw.githubusercontent.com/Virjanand/LGBT-FLF/master/lib/assets/images/event.ico'
       elsif event.event_type == 'Bar'
-        url = 'assets/hotel.png'
+        url = 'https://raw.githubusercontent.com/Virjanand/LGBT-FLF/master/lib/assets/images/bar.ico'
       elsif event.event_type == 'Taxi'
-        url = 'assets/hotel.png'
+        url = 'https://raw.githubusercontent.com/Virjanand/LGBT-FLF/master/lib/assets/images/taxi.ico'
       end
       marker.picture({
         "url" => url,

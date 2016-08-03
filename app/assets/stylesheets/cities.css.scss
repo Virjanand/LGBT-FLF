@@ -82,37 +82,31 @@ body {
   margin: -200px 0 0 -400px;
 }
 
-.hotel {
+.hotel, .hotel:hover {
   position: absolute;
+  font-family: montserrat;
+  width:120px;
+  background-color: #2AAFE7;
+  border-color: #2AAFE7;
   top: 50%;
   left: 50%;
   margin: -250px 0 0 -400px;
 }
 
-.bar {
+.taxi, .taxi:hover {
   position: absolute;
+  width:120px;
+  background-color: #FFFE24;
+  border-color: #FFFE24;
   top: 50%;
   left: 50%;
-  margin: -250px 0 0 -290px;
-}
-
-.event {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -250px 0 0 -200px;
-}
-
-.taxi {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -250px 0 0 -100px;
+  margin: -250px 0 0 -250px;
 }
 
 .everything {
   position: absolute;
+  width:120px;
   top: 50%;
   left: 50%;
-  margin: -250px 0 0 -20px;
+  margin: -250px 0 0 -100px;
 }
