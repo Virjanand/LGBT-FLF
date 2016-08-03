@@ -11,6 +11,7 @@ class CitiesController < ApplicationController
   # GET /cities/1.json
   def show
     @events = Event.all
+    @events = Event.where(event_type: 'Hotel') if params[:cat] == 'hotel'
     @hash = Gmaps4rails.build_markers(@events) do |event, marker|
       marker.lat event.location_latitude
       marker.lng event.location_longitude
@@ -32,7 +33,7 @@ class CitiesController < ApplicationController
       url = "http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=#{letter}|#{color}|000000"
       marker.picture({
         "url" => url,
-        "width" =>  32,        
+        "width" =>  32,
         "height" => 32
         })
       end
