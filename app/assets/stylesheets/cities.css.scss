@@ -3,6 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
   background-image: url("amsterdam.jpg");
+  background-size:cover;
+  background-position: center;
 }
 
 .container {
@@ -11,35 +13,62 @@ body {
 }
 
 .city-item {
+  font-family: montserrat;
+  font-weight: bold;
+  font-size: 1.5em;
   text-align: center;
+  opacity: 0.7;
 }
-.list-group-item:nth-child(1) {
+.city-item:hover {
+  opacity: 1;
+}
+.list-group-item:nth-child(1),
+.list-group-item:nth-child(1):hover {
   background-color: #f80c12;
+  color: black;
 }
-.list-group-item:nth-child(2) {
+.list-group-item:nth-child(2),
+.list-group-item:nth-child(2):hover  {
   background-color: #ff5802;
+  color: black;
 }
-.list-group-item:nth-child(3) {
+.list-group-item:nth-child(3),
+.list-group-item:nth-child(3):hover  {
   background-color: #fe9601;
+  color: black;
 }
-.list-group-item:nth-child(4) {
+.list-group-item:nth-child(4),
+.list-group-item:nth-child(4):hover  {
   background-color: #ffd300;
+  color: black;
 }
-.list-group-item:nth-child(5) {
+.list-group-item:nth-child(5),
+.list-group-item:nth-child(5):hover  {
   background-color: #fbff00;
+  color: black;
 }
-.list-group-item:nth-child(6) {
+.list-group-item:nth-child(6),
+.list-group-item:nth-child(6):hover  {
   background-color: #9dff50;
+  color: black;
 }
-.list-group-item:nth-child(7) {
+.list-group-item:nth-child(7),
+.list-group-item:nth-child(7):hover  {
   background-color: #6bd025;
+  color: black;
 }
-.list-group-item:nth-child(8) {
+.list-group-item:nth-child(8),
+.list-group-item:nth-child(8):hover  {
   background-color: #12bdb9;
+  color: black;
 }
-.list-group-item:nth-child(9) {
+.list-group-item:nth-child(9),
+.list-group-item:nth-child(9):hover  {
   background-color: #2156ff;
+  color: black;
 }
-.list-group-item:nth-child(10) {
+.list-group-item:nth-child(10),
+.list-group-item:nth-child(10):hover  {
   background-color: #724299;
+  color: black;
 }
