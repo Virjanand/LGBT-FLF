@@ -21,7 +21,7 @@ class CitiesController < ApplicationController
       marker.infowindow "<b>" + event.name + "</b></br>" + event.location_name\
       + "</br>" + "<a href=http://#{event.url}>More info</a>"
       if event.event_type == 'Hotel'
-        url = 'https://raw.githubusercontent.com/Virjanand/LGBT-FLF/master/lib/assets/images/hotel32.gif'
+        url = 'https://raw.githubusercontent.com/Virjanand/LGBT-FLF/master/lib/assets/images/hotel.ico'
       elsif event.event_type == 'Event'
         url = 'assets/hotel.png'
       elsif event.event_type == 'Bar'
