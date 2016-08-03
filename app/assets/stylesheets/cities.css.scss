@@ -72,3 +72,12 @@ body {
   background-color: #724299;
   color: black;
 }
+
+#map {
+  position:absolute;
+  width: 800px;
+  height: 400px;
+  top: 50%;
+  left: 50%;
+  margin: -200px 0 0 -400px;
+}
