@@ -38,9 +38,6 @@ class CitiesController < ApplicationController
       end
     end
 
-
-
-
     # GET /cities/new
     def new
       @city = City.new
