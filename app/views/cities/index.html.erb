@@ -1,9 +1,7 @@
 <%- model_class = City -%>
 
 <div class="container list-group">
-    <% @cities.each do |city| %>
-      <a href=<%="cities/#{city.id}"
-              %> class="city-item list-group-item">
-        <%= city.name %></a>
-    <% end %>
+	<% @cities.each do |city| %>
+	<%= link_to city.name, city_path(city), :class => "city-item list-group-item" %>
+	<% end %>
 </div>
