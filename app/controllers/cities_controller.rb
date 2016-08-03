@@ -10,27 +10,25 @@ class CitiesController < ApplicationController
   # GET /cities/1
   # GET /cities/1.json
   def show
-    @events = Event.all
-    @events = Event.where(event_type: 'Hotel') if params[:cat] == 'hotel'
+    if params[:cat]
+      @events = Event.where(event_type: params[:cat])
+    else
+      @events = Event.all
+    end
     @hash = Gmaps4rails.build_markers(@events) do |event, marker|
       marker.lat event.location_latitude
       marker.lng event.location_longitude
       marker.infowindow "<b>" + event.name + "</b></br>" + event.location_name\
       + "</br>" + "<a href=http://#{event.url}>More info</a>"
       if event.event_type == 'Hotel'
-        color = '6698ff'
-        letter = 'H'
+        url = 'https://raw.githubusercontent.com/Virjanand/LGBT-FLF/master/lib/assets/images/hotel32.gif'
       elsif event.event_type == 'Event'
-        color = 'ff6698'
-        letter = 'E'
+        url = 'assets/hotel.png'
       elsif event.event_type == 'Bar'
-        color = '98ff66'
-        letter = 'B'
+        url = 'assets/hotel.png'
       elsif event.event_type == 'Taxi'
-        color = 'ffff66'
-        letter = 'T'
+        url = 'assets/hotel.png'
       end
-      url = "http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=#{letter}|#{color}|000000"
       marker.picture({
         "url" => url,
         "width" =>  32,
